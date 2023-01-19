@@ -1,0 +1,45 @@
+
+
+.homeContainer{
+margin-top: 50%;
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  height: 100vh;
+  flex-wrap: wrap;
+  margin: auto;
+  z-index: 1;
+  
+ 
+  
+  
+}
+.homeItem{
+    position: relative;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 350px;
+    width: 25%;
+    
+    
+
+}
+.homeImg{
+  width: 100%;
+  height: 56%;
+  margin-top: 20%;
+  border-radius: 15px 50px 30px;
+  cursor: pointer;
+  object-fit: cover;
+  overflow: hidden;
+
+}
+.homeTitle>h1{
+    position: absolute;
+    left: 40px;
+    color: black;
+    font-size: 22px;
+}
