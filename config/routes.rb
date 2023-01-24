@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :information
+  resources :images
   resources :booking_rooms
   resources :payments
   resources :bookings

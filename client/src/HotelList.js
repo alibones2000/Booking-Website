@@ -3,21 +3,26 @@ import HotelCard from './HotelCard'
 import './HotelList.css'
 import {Link} from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
+import Header from './Header'
 
 
 
 
 
 
-function HotelList({hotels, grab}){
+
+function HotelList({hotels, grab, setCurrentHotel}){
     const navigate = useNavigate()
     const eachHotel = hotels?.map(hotel => {
+
+        console.log(hotel)
         return <HotelCard key={hotel.id} hotel={hotel} handleReserve={handleReserve} />
         
-        function handleReserve(id){
-            fetch(`/hotels/${id}`)
+        function handleReserve(hotel){
+            fetch(`/hotels/${hotel.id}`)
             .then(res => res.json())
-            .then(data => grab(data.rooms))
+            .then(data => grab(data))
+            setCurrentHotel(hotel)
             
             navigate('/hotel_info')
 
@@ -28,9 +33,11 @@ function HotelList({hotels, grab}){
     })
     return(
         <div>
+            <Header />
     <Link style = {{textDecoration: 'none', color:'black'}} to='/' >
         Back To Home Page </Link>
-        <div>
+        
+        <div className='hotelList'>
      {eachHotel}
      </div>
      </div>

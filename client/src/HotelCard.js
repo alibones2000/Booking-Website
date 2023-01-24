@@ -5,7 +5,7 @@ import { Button } from 'react-bootstrap';
 
 
 function HotelCard({hotel, handleReserve}){
-  const {name, location, rating, images, phone_number} = hotel
+  const {name, location, rating, images, phone_number, amentities} = hotel
   // const [rooms, setRooms] = useState([])
   // const navigate = useNavigate()
   
@@ -32,7 +32,8 @@ function HotelCard({hotel, handleReserve}){
           <h2>{location}</h2>
           <p>rating: {rating}/5</p>
           <p>Contact: {phone_number} </p>
-          <Button onClick={()=>handleReserve(hotel.id)} className="reserve">Reserve</Button>
+          <p>{amentities}</p>
+          <Button onClick={()=>handleReserve(hotel)} className="reserve">Reserve</Button>
         </div>
         <div className='listWrapper'>
 

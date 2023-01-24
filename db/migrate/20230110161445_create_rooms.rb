@@ -4,7 +4,6 @@ class CreateRooms < ActiveRecord::Migration[6.1]
       t.integer :price
       t.string :beds
       t.string :availability
-      t.string :amentities
       t.integer :hotel_id
       t.string :images
 

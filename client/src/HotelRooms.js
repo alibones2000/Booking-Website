@@ -1,8 +1,9 @@
 import './HotelRoom.css'
 import { Button } from 'react-bootstrap';
 
-function HotelRooms({room, handleBook}){
+function HotelRooms({room, handleBook, hotel}){
     const {beds, images, price} = room
+    
     return(
         <div className="rooms">
             <img className='img-rooms' src={images} alt={''}/>

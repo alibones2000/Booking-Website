@@ -2,6 +2,7 @@ import './Featured.css'
 import Search from './Header';
 import Home from './Home';
 import MailList from './MailList';
+import Footer from './Footer';
 function Feature({hotels, handleSearch, searchCity, handleSearchCity}){
     return(
         <div>
@@ -46,6 +47,7 @@ function Feature({hotels, handleSearch, searchCity, handleSearchCity}){
             </div>
             </div>
             <MailList />
+            <Footer />
         </div>
     )
 }

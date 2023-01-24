@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_10_163052) do
+ActiveRecord::Schema.define(version: 2023_01_24_193545) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,15 @@ ActiveRecord::Schema.define(version: 2023_01_10_163052) do
     t.integer "rating"
     t.string "images"
     t.string "phone_number"
+    t.string "img"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "information", force: :cascade do |t|
+    t.string "description"
+    t.string "amentity"
+    t.integer "hotel_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -47,11 +56,17 @@ ActiveRecord::Schema.define(version: 2023_01_10_163052) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "photos", force: :cascade do |t|
+    t.integer "hotel_id"
+    t.string "img"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "rooms", force: :cascade do |t|
     t.integer "price"
     t.string "beds"
     t.string "availability"
-    t.string "amentities"
     t.integer "hotel_id"
     t.string "images"
     t.datetime "created_at", precision: 6, null: false

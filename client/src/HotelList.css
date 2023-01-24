@@ -1,5 +1,5 @@
 .hotel-list{
- border-style: solid;
+
 border-radius: 15px 50px 30px;
 margin: auto;
 width: 800px;
@@ -9,9 +9,14 @@ height: 350px;
 margin-top: 30px;
 left: 400px;
 
-    
-    
+
 }
+/* .listConatiner{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+} */
+
 .listWrapper{
     width: 100%;
     max-width: 1024px;
@@ -20,11 +25,15 @@ left: 400px;
 }
 .listSearch{
     flex:1;
-    background-color: #febb02
+    padding: 10px;
+    border-radius: 10px;
+    position: sticky;
+    top: 10px;
+
+
 }
-.listSearch{
-    flex:3;
-}
+
+
 .img-size{
  height: 100%;
   width: 40%;
@@ -32,3 +41,19 @@ left: 400px;
   margin-left: 0px 0px 0px 30px;
   border-radius: 15px 50px 30px;
 }
+.lsTitle{
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 10px;
+}
+.listResult{
+    flex: 3;
+}
+
+.reserve{
+    margin-left: 45%;
+    margin-top: 3%;
+}
+/* .hotel-list{
+    margin-right: px;
+} */
