@@ -21,11 +21,18 @@ function HotelInfo({rooms, grab2, hotels, currentHotel}){
             navigate('/payment')
         }
     })
-    const image = currentHotel.photos?.map(img => {
-        console.log(img)
-        return <img className='grid-img' src={img.img} />
+    const image = currentHotel.photos?.map(image => {
+        console.log(image)
+        return <img className='grid-img' src={image.img} />
     })
-   console.log(currentHotel)
+   const detail = currentHotel.informations?.map(description => {
+    console.log(description.description)
+    return <h4> {description.description} </h4>
+   })
+
+   const amentities = currentHotel.informations?.map(amentity => {
+    return <ul> {amentity.amentity}</ul>
+   })
     return (
 
         <div>
@@ -34,8 +41,13 @@ function HotelInfo({rooms, grab2, hotels, currentHotel}){
         <div className='top-card'>
             {image}
         </div>
-        <div className='amentities'>
-            
+        <div className='parent-info'>
+        <div className='htl-details'>
+            {detail}
+        </div>
+        <div className='amentities-holder'>
+            {amentities}
+        </div>
         </div>
         <div className='info-htl'>
         {eachRoom}

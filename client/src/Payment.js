@@ -1,7 +1,13 @@
+import { useNavigate } from 'react-router-dom'
 import './payment.css'
+import { Button } from 'react-bootstrap'
 
-function Payment(){
 
+function Payment({payment}){
+    
+    const navigate = useNavigate()
+ 
+    
     return(
         <div class="container mt-5 px-5">
 
@@ -116,7 +122,7 @@ function Payment(){
                             <span>Previous step</span>
 
 
-                            <button class="btn btn-success px-3">Pay $840</button>
+                            <Button onClick={()=>navigate('/confirmation')}class="btn btn-success px-3">Book</Button>
 
 
                             
@@ -131,15 +137,15 @@ function Payment(){
 
                    <span>You have to pay</span>
                     <div class="d-flex flex-row align-items-end mb-3">
-                        <h1 class="mb-0 yellow">$549</h1> <span>.99</span>
+                        <h1 class="mb-0 yellow">{payment?.payments ? "$" + payment.payments[0].total : null}</h1> 
                     </div>
 
                     <span>Enjoy all the features and perk after you complete the payment</span>
-                    <a href="#" class="yellow decoration">Know all the features</a>
+                    <a href="#" class="yellow decoration">You're Close!</a>
 
                     <div class="hightlight">
 
-                        <span>100% Guaranteed support and update for the next 5 years.</span>
+                        <span>Refunds Guranteed for the next 48 Hours!</span>
                         
 
                     </div>

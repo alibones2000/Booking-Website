@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    background-color: #2E8BC0;
+}
+
+.conf-holder{
+    width: 50%;
+    height: 30vh;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.thank{
+    text-align: center;
+    padding: 2%;
+    background-color: mediumseagreen;
+    color: mediumspringgreen;
+}
+
+.conf{
+    text-align: center;
+}
+
+.num-holder{
+    width: 100%;
+    height: 14vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -3,10 +3,11 @@ import './App.css';
 import {Routes, Route} from 'react-router'
 import HotelList from './HotelList';
 import { useNavigate } from 'react-router';
-import Search from './Header';
 import HotelInfo from './HotelInfo'
 import Payment from './Payment';
 import Feature from './Featured';
+import Confirmation from './Confirmation';
+
 // import Home from './Home';
 
 
@@ -20,6 +21,7 @@ function App() {
   const navigate = useNavigate()
   const [payment, setPayment] = useState({})
   const [currentHotel, setCurrentHotel] = useState({})
+  
 
   useEffect(() => {
     fetch('/me')
@@ -79,14 +81,12 @@ function grab2(payment){
        <Routes>
        <Route path="/" element={<Feature hotels={hotels} handleSearch={handleSearch} searchCity={searchCity}  handleSearchCity={handleSearchCity} />} />
        <Route path="/hotel_list" element={<HotelList  grab={grab} hotels={hotels} setCurrentHotel={setCurrentHotel} handleSearchCity={handleSearchCity} />} />
-       <Route path="/hotel_info" element={<HotelInfo rooms={rooms} grab2={grab2} hotels={hotels} currentHotel={currentHotel}/>} />
-       <Route path="/payment" element={<Payment />} />
-      
-       {/* <Route path="/login" element={<Login  />} /> */}
-
-
+       <Route path="/hotel_info" element={<HotelInfo rooms={rooms} grab2={grab2} hotels={hotels} currentHotel={currentHotel} />} />
+       <Route path="/payment" element={<Payment payment={payment}/>} />
+       <Route path="/confirmation" element={<Confirmation />} />
+        {/* <Route path="/login" element={<Login  />} /> */}
        </Routes>
-      {/* < Home/> */}
+      
     </div>
   );
 }

@@ -22,7 +22,7 @@ body{
 
 .form-control:focus {
     color: #495057;
-    background-color: #fff;
+    background-color: #0071c2;
     border-color: #8bbafe;
     outline: 0;
     box-shadow: none;
@@ -71,12 +71,12 @@ input::-webkit-inner-spin-button {
 
 .card-blue{
 
-    background-color: #492bc4;
+    background-color: #0071c2;
 }
 
 .hightlight{
 
-    background-color: #5737d9;
+    background-color: #0071c2;
     padding: 10px;
     border-radius: 10px;
     margin-top: 15px;
@@ -85,7 +85,7 @@ input::-webkit-inner-spin-button {
 
 .yellow{
 
-    color: #fdcc49; 
+    color: #0071c2; 
 }
 
 .decoration{

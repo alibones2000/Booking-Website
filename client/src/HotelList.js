@@ -4,6 +4,8 @@ import './HotelList.css'
 import {Link} from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import Header from './Header'
+import Footer from './Footer'
+import MailList from './MailList'
 
 
 
@@ -40,7 +42,9 @@ function HotelList({hotels, grab, setCurrentHotel}){
         <div className='hotelList'>
      {eachHotel}
      </div>
-     </div>
+    <MailList />
+     <Footer />
+      </div>
             
 
          

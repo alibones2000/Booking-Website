@@ -8,7 +8,8 @@ function HotelRooms({room, handleBook, hotel}){
         <div className="rooms">
             <img className='img-rooms' src={images} alt={''}/>
             <h2>{beds}</h2>
-            <p>${price}</p>
+            <h4 className='price'>${price}</h4>
+            <h6 className='No'>No Refunds after 48 Hours</h6>
             <Button onClick={()=> handleBook(room.id)}className='room-btn'>Book</Button>
         </div>
     )
